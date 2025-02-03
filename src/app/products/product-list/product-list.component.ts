@@ -10,8 +10,8 @@ import { Product } from '../../shared/types/product.interface';
 })
 export class ProductListComponent {
   products: Product[] = [
-    { name: 'Product 1' },
-    { name: 'Product 2' }
+    { name: 'Product 1', id: 1, price: 100 },
+    { name: 'Product 2', id: 2, price: 200 }
   ];
 
   constructor(private cartService: CartService) {}
