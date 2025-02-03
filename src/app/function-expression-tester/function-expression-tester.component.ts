@@ -1,12 +1,11 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, effect, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-function-expression-tester',
-  standalone: true,
-  imports: [],
-  templateUrl: './function-expression-tester.component.html',
-  styleUrl: './function-expression-tester.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-function-expression-tester',
+    imports: [],
+    templateUrl: './function-expression-tester.component.html',
+    styleUrl: './function-expression-tester.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FunctionExpressionTesterComponent {
 

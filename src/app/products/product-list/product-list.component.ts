@@ -3,9 +3,10 @@ import { CartService } from '../cart.service';
 import { Product } from '../../shared/types/product.interface';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.scss'
+    selector: 'app-product-list',
+    templateUrl: './product-list.component.html',
+    styleUrl: './product-list.component.scss',
+    standalone: false
 })
 export class ProductListComponent {
   products: Product[] = [
