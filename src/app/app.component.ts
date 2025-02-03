@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FunctionExpressionTesterComponent } from './function-expression-tester/function-expression-tester.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FunctionExpressionTesterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
