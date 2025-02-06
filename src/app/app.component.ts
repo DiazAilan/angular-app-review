@@ -4,10 +4,11 @@ import { FunctionExpressionTesterComponent } from './function-expression-tester/
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { HomeComponent } from "./home/home.component";
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, FunctionExpressionTesterComponent,MatToolbarModule, MatIconModule, MatButtonModule],
+    imports: [RouterOutlet, FunctionExpressionTesterComponent, MatToolbarModule, MatIconModule, MatButtonModule, HomeComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
