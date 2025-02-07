@@ -14,6 +14,16 @@ describe('HousingLocationComponent', () => {
 
     fixture = TestBed.createComponent(HousingLocationComponent);
     component = fixture.componentInstance;
+    component.housingLocation = {
+      id: 9999,
+      name: 'Test Home',
+      city: 'Test city',
+      state: 'ST',
+      photo: 'https://angular.dev/assets/images/tutorials/common/example-house.jpg',
+      availableUnits: 99,
+      wifi: true,
+      laundry: false,
+    };
     fixture.detectChanges();
   });
 
