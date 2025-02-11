@@ -8,5 +8,7 @@ import { HousingLocation } from '../housing-location';
   styleUrl: './housing-location.component.scss'
 })
 export class HousingLocationComponent {
+  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common/';
+
   @Input() housingLocation!: HousingLocation;
 }
