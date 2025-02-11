@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { HousingLocation } from '../housing-location';
 
 @Component({
   selector: 'app-housing-location',
   imports: [],
   templateUrl: './housing-location.component.html',
-  styleUrl: './housing-location.component.scss'
+  styleUrl: './housing-location.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HousingLocationComponent {
   readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common/';
