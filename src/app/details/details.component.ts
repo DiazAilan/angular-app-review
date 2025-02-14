@@ -1,19 +1,18 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housing-location';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-details',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DetailsComponent {
-  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common/';
-
   route: ActivatedRoute = inject(ActivatedRoute);
   housingLocationId: number;
   housingService: HousingService = inject(HousingService);
@@ -27,9 +26,13 @@ export class DetailsComponent {
     email: [''],
   });
 
-  constructor() {
+  constructor(private cdr: ChangeDetectorRef) {
     this.housingLocationId = Number(this.route.snapshot.params['id']);
-    this.housingLocation = this.housingService.getHousingLocationById(this.housingLocationId);
+    this.housingService.getHousingLocationById(this.housingLocationId)
+      .then((housingLocation) => {
+        this.housingLocation = housingLocation;
+        this.cdr.detectChanges();
+      });
   }
 
   submitApplication(): void {

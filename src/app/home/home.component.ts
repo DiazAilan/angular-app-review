@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../housing-location';
@@ -16,9 +16,13 @@ export class HomeComponent {
   housingLocations: HousingLocation[] = [];
   filteredLocations: HousingLocation[] = [];
 
-  constructor() {
-    this.housingLocations = this.housingService.getAllHousingLocations();
-    this.filteredLocations = this.housingLocations;
+  constructor(private cdr: ChangeDetectorRef) {
+    this.housingService.getAllHousingLocations()
+      .then((housingLocationList: HousingLocation[]) => {
+        this.housingLocations = housingLocationList;
+        this.filteredLocations = housingLocationList;
+        this.cdr.detectChanges();
+      });
   }
 
   filterResults(query: string): void {

@@ -10,7 +10,5 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HousingLocationComponent {
-  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common/';
-
   @Input() housingLocation!: HousingLocation;
 }

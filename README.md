@@ -1,27 +1,63 @@
-# AngularAppReview
+# Angular App Review
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+## Overview
 
-## Development server
+This project is an Angular application that allows users to view and apply for housing locations. The application fetches data from a mocked database and displays it in a user-friendly interface.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+To get started with the project, follow the instructions below.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+Make sure you have the following installed on your machine:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js (version 14 or higher)
+- npm (Node Package Manager)
 
-## Running unit tests
+### Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository to your local machine:
 
-## Running end-to-end tests
+   ```bash
+   git clone https://github.com/DiazAilan/angular-app-review.git
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Navigate to the project directory:
 
-## Further help
+   ```bash
+   cd angular-app-review
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. Install the project dependencies:
+
+   ```bash
+   npm i
+   ```
+
+### Running the Application
+
+To run the application, you can use the following commands:
+
+- To launch the Angular application on port 4200, use:
+
+  ```bash
+  npm start
+  ```
+
+- To run the server with the mocked database (using `json-server`), which will serve the locations data, use:
+
+  ```bash
+  npm run serve
+  ```
+
+### Accessing the Application
+
+Once the application is running, you can access it by navigating to `http://localhost:4200` in your web browser.
+
+## Features
+
+- View a list of housing locations.
+- Filter locations by city.
+- Apply for housing directly through the application.
+
