@@ -45,7 +45,7 @@ To run the application, you can use the following commands:
   npm start
   ```
 
-- To run the server with the mocked database (using `json-server`), which will serve the locations data, use:
+- To run the server with the mocked database (using a Node instance), which will serve the locations data, use:
 
   ```bash
   npm run serve
@@ -60,4 +60,3 @@ Once the application is running, you can access it by navigating to `http://loca
 - View a list of housing locations.
 - Filter locations by city.
 - Apply for housing directly through the application.
-
